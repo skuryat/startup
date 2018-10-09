@@ -34,6 +34,10 @@ ul {
 
 a {
     text-decoration: none;
+    cursor: pointer;
+}
+button{
+  cursor: pointer;  
 }
 
 .container {
@@ -43,7 +47,7 @@ a {
 }
 
 header {
-    background: url(img/header_bagraund.png) no-repeat top center /cover;
+    background: url(img/header_bagraund.png) no-repeat top center /cover fixed;
     height: 100vh;
     color: #fff;
     position: relative;
@@ -215,8 +219,10 @@ header {
 .about_us_info p {
     width: 555px;
 }
-
-.about_us_gallery {
+.about_us_gallery{
+    
+}
+.about_us_cards {
     margin: 70px 0 0 0;
     display: flex;
     justify-content: space-between;
@@ -301,33 +307,28 @@ header {
     justify-content: center;
 }
 
-.latest_works_menu li {
+.latest_works_menu label li {
     margin-right: 30px;
+    cursor: pointer;
 }
 
-.latest_works_menu li:last-child {
+
+.latest_works_menu>label[for='Strategy']>li{
     margin-right: 0;
 }
-
-.latest_works_menu li a {
-    color: #555555;
-    font-size: 16px;
-}
-
-.latest_works_menu li a:hover {
-    color: #c0301c;
-}
-
 .card_works {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .card_work {
     width: 360px;
     border-bottom: 20px solid #fff;
+    border-left: 10px solid #fff;
+    border-right: 10px solid #fff;
     height: 325px;
+    display: none;
 }
 
 .card_work_img1 {
@@ -408,6 +409,7 @@ header {
     color: #fff;
     text-transform: uppercase;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .card_work:hover .card_work_img_overlay {
@@ -417,6 +419,41 @@ header {
 .button_card_work:hover {
     background-color: #fff;
     color: #c0301c;
+}
+/*Сортировка по последним работам*/
+.container_header input{
+    display: none;
+}
+input[id="All"]:checked ~ .latest_works_menu > label[for="All"]>li {
+    color: #c0301c;
+}
+input[id="Branding"]:checked ~ .latest_works_menu > label[for="Branding"] >li {
+    color: #c0301c;
+}
+input[id="Design"]:checked ~ .latest_works_menu > label[for="Design"] >li{
+    color: #c0301c;
+}
+input[id="Development"]:checked ~ .latest_works_menu > label[for="Development"] >li {
+    color: #c0301c;
+}
+input[id="Strategy"]:checked ~ .latest_works_menu > label[for="Strategy"]>li {
+    color: #c0301c;
+}
+input[id="All"]:checked ~ .card_works > div.All {
+    display: block;
+}
+input[id="Branding"]:checked ~ .card_works > div.Branding {
+    display: block;
+}
+input[id="Design"]:checked ~ .card_works > div.Design {
+    display: block;
+}
+input[id="Strategy"]:checked ~ .card_works > div.Strategy {
+    display: block;
+}
+
+input[id="Development"]:checked ~ .card_works > div.Development {
+    display: block;
 }
 
 /*Паралакс*/
@@ -711,6 +748,8 @@ input[type=submit] {
     text-transform: uppercase;
     color: #555555;
     font: 12px 'Montserrat', sans-serif;
+    cursor: pointer;
+     box-sizing: border-box;
 }
 
 :-moz-placeholder {
@@ -732,13 +771,20 @@ input[type=text]:focus,
 input[type=email]:focus,
 textarea:focus {
     outline-color: red;
+    border: none;
+    border-color: red;
 }
 
 input[type=submit]:active {
     background: red;
     color: #fff;
+    border-color: red;
 }
-
+input[type=submit]:hover {
+    background: red;
+    color: #fff;
+    border-color: red;
+}
 .dop_info {
     display: inline-block;
     margin-left: 50px;
@@ -780,6 +826,7 @@ footer {
 
 .circle .fa-twitter {
     margin: 9px 0 0 0;
+    color: #fff;
 }
 
 .container_header .footer_hr {
