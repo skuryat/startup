@@ -47,6 +47,7 @@ a {
     text-transform: uppercase;
     color: #fff;
     cursor: pointer;
+    transition: all 0.25s ease;
 }
 
 .button:hover {
@@ -88,14 +89,15 @@ header {
 }
 
 
-.header_menu a {
+.header_menu li a {
     color: #fff;
     margin-left: 40px;
-    font: 14px 'Montserrat', sans-serif;
+    font: 18px 'Montserrat', sans-serif;
+    transition: all 0.5s linear;
 }
 
 .header_menu a:hover {
-    text-shadow: 0 0 1em #fff;
+    color: #FF4500;
 }
 
 .center_header {
@@ -170,6 +172,7 @@ header {
     flex-direction: column;
     align-items: center;
     width: 350px;
+    transition: all .5s;
 }
 
 .services_cards_circle {
@@ -247,6 +250,7 @@ header {
 .about_us_card {
     width: 263px;
     text-align: center;
+  
 }
 
 .about_us_card h4 {
@@ -287,6 +291,7 @@ header {
     width: 100%;
     height: 250px;
     display: none;
+    transition: all .5s linear;
 }
 
 .cards_social {
@@ -295,12 +300,14 @@ header {
     justify-content: space-between;
     margin: 0 auto;
     padding-top: 190px;
+     
 }
 
 .card_social {
     width: 28px;
     height: 28px;
     background-color: transparent;
+     transition: all .5s linear;
 }
 
 .card_social .fab {
@@ -818,6 +825,7 @@ input[type=submit]:hover {
     background: #c0301c;
     color: #fff;
     border-color: #c0301c;
+    transition: all 0.3s ease;
 }
 
 .dop_info {
