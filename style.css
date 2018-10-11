@@ -441,9 +441,15 @@ header {
 /*    transition: transform .2s ease-in 0.19s;*/
     transition-delay: 0.16s;
 }
-@media (min-width : 320px) and (max-width : 1024px){
+@media (min-width : 320px) and (max-width : 480px){
 .about_us_gallery {
         max-width: 263px;
+        margin: 0 auto;
+}
+}
+@media (max-width : 1024px) and (min-width : 480px){
+    .about_us_gallery {
+        max-width: 849px;
         margin: 0 auto;
 }
 }
@@ -453,7 +459,6 @@ header {
         margin: 0 auto;
 }
 }
-
 /*Последние работы*/
 
 .latest_works_menu {
