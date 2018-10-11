@@ -102,7 +102,9 @@ header {
 .top_header_scrolled > div > nav > .header_menu > li > a {
     color: #fff;;
 }
-
+.top_header_scrolled > div > nav > .header_menu > li > a:hover {
+    color: #FF4500;;
+}
 .top_header h4 {
     font-size: 20px;
 }
@@ -265,7 +267,7 @@ header {
 }
 
 .about_us_gallery {
-    width: 1140px;
+    max-width: 1140px;
     overflow: hidden;
     position: relative;
 }
@@ -343,8 +345,9 @@ header {
 
 
 .about_us_card {
-    width: 263px;
+    max-width: 263px;
     text-align: center;
+    border-right: 30px solid #f8f8f8;
 
 }
 
@@ -437,6 +440,18 @@ header {
 .about_us_card_img:hover .card_social:nth-child(4) {
 /*    transition: transform .2s ease-in 0.19s;*/
     transition-delay: 0.16s;
+}
+@media (min-width : 320px) and (max-width : 1024px){
+.about_us_gallery {
+        max-width: 263px;
+        margin: 0 auto;
+}
+}
+@media (max-width : 1140px) and (min-width : 1024px){
+    .about_us_gallery {
+        max-width: 849px;
+        margin: 0 auto;
+}
 }
 
 /*Последние работы*/
@@ -777,10 +792,20 @@ input[id="Development"]:checked ~ .card_works > div.Development {
     width: 300%;
     transition: all 0.5s;
     animation-name: blink;
-     
+     animation: 4s linear infinite alternate;
 
 }
-
+@keyframes .blink{
+  0%{
+    left:0px;
+  }
+  50%{
+    left:-400px;
+  }
+  100%{
+    left:-800px;
+  }
+}
 #btn1:checked ~ .clients_slider_inner .clients_slider {
     transform: translate(0);
 }
