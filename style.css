@@ -114,7 +114,9 @@ header {
     font: bold 20px 'Montserrat', sans-serif;
     margin-left: 10px;
 }
-
+.header_menu{
+    margin-right: 10px;
+}
 .header_menu li a {
     color: #fff;
     margin-left: 40px;
@@ -810,22 +812,8 @@ input[id="Development"]:checked ~ .card_works > div.Development {
     display: flex;
     width: 300%;
     transition: all 0.5s;
-    animation-name: blink;
-    animation: 4s linear infinite alternate;
-
 }
 
-@keyframes .blink {
-    0% {
-        left: 0px;
-    }
-    50% {
-        left: -400px;
-    }
-    100% {
-        left: -800px;
-    }
-}
 
 #btn1:checked ~ .clients_slider_inner .clients_slider {
     transform: translate(0);
@@ -872,7 +860,7 @@ input[id="Development"]:checked ~ .card_works > div.Development {
 
 .connectANDform {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
 }
 
@@ -1077,12 +1065,13 @@ footer {
     }
     input.toggleMenu:checked ~ ul {
         display: block;
+        margin-top: 19.6px;
     }
     .header_menu li a {
         margin: 0;
     }
     .header_menu li {
-        margin: 5px 0 5px 10px;
+        margin: 0 0 20px 10px;
     }
 
     /*Сервисы*/
@@ -1187,7 +1176,7 @@ footer {
     .container_border input[type=text],
     .container_border input[type=email],
     textarea {
-        width: 90%;
+        width: 98%;
         margin: 0 auto 15px;
     }
     textarea {
@@ -1262,7 +1251,7 @@ footer {
     .container_border input[type=text],
     .container_border input[type=email],
     textarea {
-        width: 90%;
+        width: 98%;
         margin: 0 auto 15px;
     }
     textarea {
