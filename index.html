@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>StarUp</title>
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <link rel="stylesheet" media="screen, 3d-glasses, print and resolution > 90dpi" href="...">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -14,13 +14,15 @@
 
 <body>
 
-    <header>
+    <header id="home">
         <div class="top_header">
             <div class="top_header_container">
-                <h4>Startup</h4>
-                <nav>
+                <a href="#home">Startup</a>
+                <nav class="dws-menu">
+                    <input type="checkbox" name="toggle" id="menu" class="toggleMenu">
+                    <label for="menu" class="toggleMenu"><i class="fa fa-bars"></i></label>
                     <ul class="header_menu">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="#home">Home</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#about_us">About</a></li>
                         <li><a href="#latest_works">Works</a></li>
@@ -32,7 +34,6 @@
             </div>
         </div>
         <div class="img_overlay">
-            <div class="container">
 
                 <div class="center_header">
                     <h1>Welcome to STARTUP</h1>
@@ -40,9 +41,8 @@
                     <a href="#get_in" class="button">Get Started</a>
                 </div>
             </div>
-        </div>
     </header>
-    <section id="services">
+<section id="services">
         <div class="container">
             <div class="container_header">
                 <h3>Services</h3>
@@ -389,7 +389,6 @@
             </div>
         </div>
     </section>
-
     <section id="clients">
         <div class="container">
             <div class="logos">
@@ -440,7 +439,7 @@
                         <i class="fas fa-map-marker-alt icon2"></i>
                         <div class="connect_card_right">
                             <h4>Address</h4>
-                            <p>312, 7th Ave, New York<br> NY 101200, United States of America</p>
+                            <p>312, 7th Ave, New York<br> NY 101200, USA</p>
                         </div>
                     </div>
                     <div class="connect_card">
@@ -558,12 +557,12 @@
         //
         //});
 
-//        setInterval(function() {
-//            $('.about_us_card_inner').css({
-//                "transform": "translate(-300px)", 
-//            })
-////            console.log("asd");
-//        }, 200);
+        //        setInterval(function() {
+        //            $('.about_us_card_inner').css({
+        //                "transform": "translate(-300px)", 
+        //            })
+        ////            console.log("asd");
+        //        }, 200);
 
     </script>
 
